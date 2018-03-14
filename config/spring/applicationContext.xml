@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<!--引入配置属性文件 -->  
+<context:property-placeholder location="classpath*:/mysql-jdbc.properties" />
+
+<!--扫描下文件，自动注入dao,entity,service为bean -->  
+<context:component-scan base-package="com.sm.dao.impl,com.sm.service.impl" />
+
+    
+</beans>
